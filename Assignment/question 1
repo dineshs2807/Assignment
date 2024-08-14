@@ -1,0 +1,29 @@
+n = int(input("Enter the number: "))
+
+n = str(n)
+
+if len(n) > 3:
+    last_three = n[-3:]
+    remaining = n[:-3]
+    
+    result = ""
+    
+    while len(remaining) > 2:
+        result = "," + remaining[-2:] + result
+        remaining = remaining[:-2]
+    
+    
+    number = remaining + result + "," + last_three
+else:
+    number = n
+
+print("The integers in indian currency notation are",number)
+
+
+"""
+OUTPUT
+
+Enter the number: 584649848
+The integers in indian currency notation are 58,46,49,848
+
+"""
